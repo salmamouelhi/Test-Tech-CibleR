@@ -1,11 +1,10 @@
 import React , {useState} from 'react';
 import {getImagePath} from "../tools/toolbox";
-import PopUpLogin from './popUpLogin';
+import PhonePopup from './popUpLogin';
 
 
 
 const Landing = ({setScreen}) => {
-
   
   const [show, setShow] = useState(false);
 
@@ -15,10 +14,12 @@ const Landing = ({setScreen}) => {
 
   return (
     <>
-    <div className="right">
+    
+     <div className="right">
       <button onClick={handleCLick}>Je me connecte</button>
-      <PopUpLogin show={show} setShow={setShow}/>
-    </div>
+      <PhonePopup show={show} setShow={setShow}/> 
+     
+    </div> 
      
     </>
   )

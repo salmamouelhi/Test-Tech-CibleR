@@ -2,6 +2,7 @@
 import { mount, shallow } from 'enzyme';
 import React from 'react';
 import Landing from "../components/Landing";
+import PhonePopup from '../components/popUpLogin';
 
 it('renders Landing page', () => {
   const setScreen = () => undefined
@@ -18,7 +19,7 @@ it('with a empty accesstoken, the button send to login', () => {
   expect(nextScreen).toEqual('login');
 });
 
-it('with a empty accesstoken, the button send to login', () => {
+it('with a empty accesstoken, the button send to login 2', () => {
   let nextScreen = null;
   const setScreen = jest.fn().mockImplementation((e) => nextScreen = e);
   const wrapper = shallow(<Landing setScreen={setScreen} />);
@@ -26,4 +27,11 @@ it('with a empty accesstoken, the button send to login', () => {
   wrapper.find('button').simulate('click');
   expect(setScreen).toBeCalled();
   expect(nextScreen).toEqual('gameplay');
+});
+
+it('displays an error message when the phone number is empty', () => {
+  const wrapper = shallow(<PhonePopup />);
+  wrapper.find('#phoneId').simulate('change', { target: { value: '' } });
+  wrapper.find('form').simulate('submit');
+  expect(wrapper.find('.error').text()).toEqual('Please enter a valid phone number');
 });

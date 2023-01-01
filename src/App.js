@@ -2,13 +2,12 @@ import React, {useState} from 'react';
 import './App.css';
 import Landing from "./components/Landing";
 import Validation from "./components/Validation";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   CiblerContext, initCiblerContext,
   fetchPartner,
   saveContext, getImagePath,
 } from "./tools/toolbox";
-import NoBudget from './components/Validation';
+
 
 function App() {
   const [screen, setScreen] = useState('landing');

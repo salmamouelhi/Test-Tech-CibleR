@@ -1,43 +1,25 @@
-import React , {useState , useEffect} from "react";
 import {CiblerContext} from "./toolbox";
 import axios from "axios";
-import NoBudget from "../components/Validation";
 
 
+//login methode
+const postToLoginService = async (phoneNumber) => {
+const endpoint = `${CiblerContext().endpoint}/api/bienvenus/login?customerId=318`;
 
-/*here make a POST call on this address `${CiblerContext().endpoint}/api/bienvenus/login?customerId=318`
-with the body:
-{
-  phone: 'your phone',
+const body = {
+  phone: phoneNumber ,
   campaignId: 63080118,
   customerId: 318
-}
-and the headers:
-    Accept: application/json
-    Content-Type: application/json
-
- */
-
-const login = async (phoneNumber , setBehaviorId ) => {
-  await fetch(`${CiblerContext().endpoint}/api/bienvenus/login?customerId=318`, {
-    method: 'POST',
-    headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    phone: phoneNumber,
-    campaignId: 63080118,
-    customerId: 318
-  })
-  })
-    .then(response => response.json())
-    .then(data => {
-      // Get behaviorId from server response and set it in state
-      setBehaviorId(data.behaviorId);
-    });
 };
 
-export{
-  login,
+const headers = {
+  Accept: 'application/json',
+  'Content-Type': 'application/json'
+};
+  const response = await axios.post(endpoint, body , {headers});
+  return response.data;
+}
+
+export {
+  postToLoginService,
 };

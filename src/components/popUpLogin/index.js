@@ -1,46 +1,53 @@
 import React, { useState } from 'react';
 import NoBudget from '../Validation';
-import { CiblerContext } from '../../tools/toolbox';
-import { login } from '../../tools/apitools';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Formfield from '../Formfields/Textfield';
 import './index.css';
+import { postToLoginService } from '../../tools/apitools';
 
-const PhoneInputPopup = (props) => {
-  
-  
+
+const PhonePopup = (props) => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [behaviorId, setBehaviorId] = useState('');
 
-  const handleClose = () => props.setShow(false);
+  const handleClose = () => {
+    props.setShow(false);
+    setPhoneNumber('');
+    setBehaviorId('');
+  }
   const handleShow = () => props.setShow(true);
 
-  
-
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const result = await postToLoginService(phoneNumber);
+    setBehaviorId(result.behaviorId);
+  }
   return (
-    <>
-      <Modal 
-        show={props.show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}   
-      >
-       <Modal.Header  className="header" closeButton>
-          <Modal.Title className="title">Welcome to cibleR </Modal.Title>
+    <div>
+        <Modal 
+          show={props.show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}   
+        >
+        <Modal.Header  className="header" closeButton>
+        <Modal.Title className="title">Welcome to CibleR </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Formfield
-        onChange={event => setPhoneNumber(event.target.value)}/>
-        </Modal.Body>
+        <form onSubmit={handleSubmit}>
+        <Formfield 
+         id="phoneId" value={phoneNumber} onChange={setPhoneNumber}
+        />
+        <Button type="submit" className = "custom-button">Login</Button>
+       </form>
+       </Modal.Body>
         <Modal.Footer> 
-        <Button onClick={login(phoneNumber, setBehaviorId)}>Confirm</Button>
-        {behaviorId && <NoBudget behaviorId={behaviorId} />}
-        </Modal.Footer>
-        </Modal>
-
-    </>
+        {behaviorId && <NoBudget behaviorId={behaviorId} /> }
+      </Modal.Footer>
+      </Modal>
+    </div>
   );
 };
 
-export default PhoneInputPopup;
+export default PhonePopup;
