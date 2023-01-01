@@ -11,13 +11,15 @@ const PhonePopup = (props) => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [behaviorId, setBehaviorId] = useState('');
 
+
+  //close modal and setting states to default 
   const handleClose = () => {
     props.setShow(false);
     setPhoneNumber('');
     setBehaviorId('');
   }
-  const handleShow = () => props.setShow(true);
 
+  //getting postToLoginService and setting the behavior id to bihavior id state 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const result = await postToLoginService(phoneNumber);

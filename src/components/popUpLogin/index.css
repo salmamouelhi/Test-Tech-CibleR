@@ -1,21 +1,6 @@
-.modal {
-    top: '95%';
-    left: '50%';
-    right: 'auto';
-    bottom: 'auto';
-    margin-right: '-50%';
-    width: '60%';
-    transform: 'translate(-40%, -10%)';
-}
-
 .header{
     background-color: rgb(226, 149, 114);
-    display: "flex";
-    justify-content: "center";
-    align-items: "center";
 } 
-
-   
 
 .login-button {
   display: inline-block;
@@ -48,9 +33,7 @@
   outline: none;
 }
 
-
 .modal-title {
-    text-align: center;
     color: rgb(29, 27, 27);
 }
 

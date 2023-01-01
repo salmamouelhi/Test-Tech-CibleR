@@ -7,7 +7,6 @@ import PhonePopup from './popUpLogin';
 const Landing = ({setScreen}) => {
   
   const [show, setShow] = useState(false);
-
   const handleCLick = () => {
     setShow(true);
   }
