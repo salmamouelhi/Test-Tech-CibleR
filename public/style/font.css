@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Neo Sans Std';
+    src: url('https://cdn.cibler.io/fonts/Neo-Sans-Std-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neo Sans Std';
+    src: url('https://cdn.cibler.io/fonts/Neo-Sans-Std-Regular.woff') format('woff'),
+    url('https://cdn.cibler.io/fonts/Neo-Sans-Std-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neo Sans Std';
+    src: url('https://cdn.cibler.io/fonts/Neo-Sans-Std-Medium.woff') format('woff'),
+    url('https://cdn.cibler.io/fonts/Neo-Sans-Std-Medium.ttf') format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neo Sans Std';
+    src: url('https://cdn.cibler.io/fonts/Neo-Sans-Std-Bold.woff') format('woff'),
+    url('https://cdn.cibler.io/fonts/Neo-Sans-Std-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neo Sans Std';
+    src: url('https://cdn.cibler.io/fonts/Neo-Sans-Std-Black.woff') format('woff'),
+    url('https://cdn.cibler.io/fonts/Neo-Sans-Std-Black.ttf') format('ttf');
+    font-weight: 900;
+    font-style: normal;
+}
