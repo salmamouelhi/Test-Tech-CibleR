@@ -1,4 +1,5 @@
 import React from 'react';
+import './Textfields.css';
 
 const Formfield = ({onChange, id, label, value, placeholder, type, children}) => {
   return (
@@ -12,6 +13,7 @@ const Formfield = ({onChange, id, label, value, placeholder, type, children}) =>
         id={id}
         onChange={(e) => onChange(e.target.value, id)}
         placeholder={"Votre numéro de télephone"}
+        className = "inputPhoneNumber"
       />
     </div>
   )

@@ -39,7 +39,7 @@ const PhonePopup = (props) => {
         <Formfield 
          id="phoneId" value={phoneNumber} onChange={setPhoneNumber}
         />
-        <Button type="submit" className = "custom-button">Login</Button>
+        <button type="submit" className = "login-button">Login</button>
        </form>
        </Modal.Body>
         <Modal.Footer> 
