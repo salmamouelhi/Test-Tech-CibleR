@@ -1,6 +1,6 @@
 # Test-Tech-CibleR
 
-#Goals
+# Goals
 On page load, the project render the Landing component. Add a new component which will render a popup containing a text input field where the user can enter it's phone number and a confirmation button. On the click of the button, send a POST call to a login service with the phone number in body. Then get the behaviorId key in the result, display the Validation component, and display the behaviorId.
 
 In the popup, use the Textfield component from src/components/Formfields. Add your new component in src/components folder. Add the api call in src/tools/apitools.js.
