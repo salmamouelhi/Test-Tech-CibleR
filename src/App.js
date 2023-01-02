@@ -5,7 +5,7 @@ import Validation from "./components/Validation";
 import {
   CiblerContext, initCiblerContext,
   fetchPartner,
-  saveContext, getImagePath,
+  saveContext, 
 } from "./tools/toolbox";
 
 
