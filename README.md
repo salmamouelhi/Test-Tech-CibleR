@@ -5,8 +5,8 @@ This is a ReactJS application that displays a Landing component and allows users
 ## Getting Started
 To run this application locally, follow these steps:
 
-1- Clone the repository
-2- Install the dependencies : yarn install
+1- Clone the repository <br>
+2- Install the dependencies : yarn install<br>
 3- Start the development server : yarn start 
 
 The application should now be running on http://localhost:3000/.
