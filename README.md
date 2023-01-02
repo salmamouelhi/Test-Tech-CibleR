@@ -1,45 +1,25 @@
-# Getting Started with Create React App
+# Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a ReactJS application that displays a Landing component and allows users to enter their phone number in a popup window. When the user clicks the login button, the application makes a POST request to a login service with the phone number, campaignId and customerId in the request body. If the login is successful, the Validation component is displayed along with the behaviorId key from the result.
 
-## Goals
-On page load, the project render the `Landing` component.
-Add a new component which will render a popup containing a text input field where the user can enter it's phone number and a confirmation button.
-On the click of the button, send a POST call to a login service with the phone number in body. 
-Then get the behaviorId key in the result, display the `Validation` component, and display the behaviorId. 
+## Getting Started
+To run this application locally, follow these steps:
 
-In the popup, use the `Textfield` component from `src/components/Formfields`.
-Add your new component in `src/components` folder.
-Add the api call in `src/tools/apitools.js`.
+1 - Clone the repository
+2 - Install the dependencies : yarn install
+3 - Start the development server : yarn start 
 
-For the login, make a POST call on this address `${CiblerContext().endpoint}/api/bienvenus/login?customerId=318`
-with the body:  
-{
-  phone: '0612345678',
-  campaignId: 63080118,
-  customerId: 318
-}  
-and the headers:  
-    Accept: application/json  
-    Content-Type: application/json
+The application should now be running on http://localhost:3000/.
 
-Add the necessary tests in `src/__test__/landing.test.js` and the css classes in `public/style/common.css`
+## Components
 
-When you are done, push on a new branch `test/your_name`
+The following components are included in this application:
+- Landing: This component is the main landing page for the application.
+- PhonePopup: This component displays a text input field where the user can enter their phone number and a confirmation button. When the button is clicked, the application makes a POST request to the login service with the phone number in the request body.
+- Validation (NoBudget) : This component is displayed if the login is successful. It displays the behaviorId key from the result.
 
-## Available Scripts
+## Tests
+The request body should include the phone number in the following format:  "phoneNumber": "0612345678"
+In order to run tests you can use : yarn test
 
-In the project directory, you can run:
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
