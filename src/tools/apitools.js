@@ -2,7 +2,7 @@ import {CiblerContext} from "./toolbox";
 import axios from "axios";
 
 
-//login methode using axios
+//login methode using axios 
 const postToLoginService = async (phoneNumber) => {
 const endpoint = `${CiblerContext().endpoint}/api/bienvenus/login?customerId=318`;
 
