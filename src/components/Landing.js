@@ -1,5 +1,6 @@
 import React , {useState} from 'react';
 import PhonePopup from './popUpLogin';
+import '../index.css';
 
 
 
