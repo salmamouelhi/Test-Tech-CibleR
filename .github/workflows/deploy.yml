@@ -26,7 +26,7 @@ jobs:
         cache: 'yarn'
     - run: yarn install
     - run: yarn run build 
-    #- run: npm test
+    - run: npm test
     
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
