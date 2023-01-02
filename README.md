@@ -21,6 +21,7 @@ The following components are included in this application:
 ## Tests
 The request body should include the phone number in the following format:  "phoneNumber": "0612345678"<br>
 In order to run tests you can use : yarn test
+NOTE :  i couldn't run the tests (yarn test) but i have implemented the needed ones
 
 ## Devops 
 
