@@ -22,4 +22,11 @@ The following components are included in this application:
 The request body should include the phone number in the following format:  "phoneNumber": "0612345678"<br>
 In order to run tests you can use : yarn test
 
+##Devops 
+
+- Setting up a CI/CD pipeline using GitHub 
+- In the deploy.yml file, we defined the name of our pipeline and the events that should trigger it
+- Once the pipeline has completed successfully, the code will be deployed to GitHub Pages and available at https://salma.github.io/Test-Tech-CibleR
+
+
 
