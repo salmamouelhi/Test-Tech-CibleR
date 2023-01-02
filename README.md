@@ -19,7 +19,7 @@ The following components are included in this application:
 - Validation (NoBudget) : This component is displayed if the login is successful. It displays the behaviorId key from the result.
 
 ## Tests
-The request body should include the phone number in the following format:  "phoneNumber": "0612345678"
+The request body should include the phone number in the following format:  "phoneNumber": "0612345678"<br>
 In order to run tests you can use : yarn test
 
 
