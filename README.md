@@ -26,7 +26,7 @@ In order to run tests you can use : yarn test
 
 - Setting up a CI/CD pipeline using GitHub 
 - In the deploy.yml file, we defined the name of our pipeline and the events that should trigger it
-- Once the pipeline has completed successfully, the code will be deployed to GitHub Pages and available at https://salma.github.io/Test-Tech-CibleR
+- Once the pipeline has completed successfully, the code will be deployed to GitHub Pages and available at https://salmamouelhi.github.io/Test-Tech-CibleR/
 
 
 
