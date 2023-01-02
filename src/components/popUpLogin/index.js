@@ -10,6 +10,7 @@ const PhonePopup = (props) => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [behaviorId, setBehaviorId] = useState('');
 
+ 
 
   //close modal and setting states to default 
   const handleClose = () => {
@@ -37,13 +38,17 @@ const PhonePopup = (props) => {
         </Modal.Header>
         <Modal.Body>
         <form onSubmit={handleSubmit}>
+       
         <Formfield 
-         id="phoneId" value={phoneNumber} onChange={setPhoneNumber}
+        id="phoneId" value={phoneNumber} onChange={setPhoneNumber}
         />
         <button type="submit" className = "login-button">Login</button>
        </form>
+       
        </Modal.Body>
+       
         <Modal.Footer> 
+       
         {behaviorId && <NoBudget behaviorId={behaviorId} /> }
       </Modal.Footer>
       </Modal>
