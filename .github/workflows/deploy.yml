@@ -1,5 +1,5 @@
 
-name: Deply using gitHub pages
+name: Deploy using gitHub pages
 
 on:
   push:

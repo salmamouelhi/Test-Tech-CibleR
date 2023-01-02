@@ -20,11 +20,12 @@ The following components are included in this application:
 
 ## Tests
 The request body should include the phone number in the following format:  "phoneNumber": "0612345678"<br>
-In order to run tests you can use : yarn test
+In order to run tests you can use : yarn test<br>
+NOTE :  i couldn't run the tests (yarn test) but i have implemented the needed ones
 
 ## Devops 
 
-- Setting up a CI/CD pipeline using GitHub 
+- Setting up a CI/CD pipeline that you can find in action section using GitHub 
 - In the deploy.yml file, i defined the name of my pipeline and the events that should trigger it
 - Once the pipeline has completed successfully, the code will be deployed to GitHub Pages and available at https://salmamouelhi.github.io/Test-Tech-CibleR/
 
